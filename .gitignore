@@ -17,3 +17,6 @@ uploads/
 
 # Coverage
 coverage/
+
+# test secrets
+redispass

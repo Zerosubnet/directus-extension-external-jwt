@@ -2,15 +2,14 @@ import { defineHook } from '@directus/extensions-sdk';
 import { getAccountabilityForToken } from './external-jwt/get-accountability-for-token';
 import type { Request } from 'express';
 import jwt from 'jsonwebtoken';
-import { HookConfig } from '@directus/types';
-
-
+import type {HookConfig} from '@directus/extensions'
+import type { Accountability, EventContext } from '@directus/types';
 
 export default defineHook<HookConfig>(({ filter }) => {
 	
 	// get all configuration
 	
-	filter('authenticate', (defaultAccountability, event, context)  => {
+	filter('authenticate', (defaultAccountability: Accountability, event, context: EventContext)  => {
 		const req = <Request>event['req'];
 		if(!req.token) return defaultAccountability;
 
