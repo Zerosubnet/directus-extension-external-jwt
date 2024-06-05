@@ -1,0 +1,16 @@
+releases:
+  branches:
+  - name: main
+  - name: beta
+    prerelease: true
+plugins:
+  - "@semantic-release/commit-analyzer"
+  - "@semantic-release/git":
+    assets:
+      - README.md
+    message: "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+  - "@semantic-release/release-notes-generator":
+    assets:
+      - path: dist/*.js
+        label: JS distribution
+  - "@semantic-release/github"
