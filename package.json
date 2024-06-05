@@ -128,7 +128,7 @@
 		"eslint-plugin-promise": "^6.2.0",
 		"fs-extra": "^11.2.0",
 		"js-yaml": "^4.1.0",
-		"knex": "^2.5.1",
+		
 		"lodash-es": "^4.17.21",
 		"nyc": "^15.1.0",
 		"semantic-release": "^21.1.2",

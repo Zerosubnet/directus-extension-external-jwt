@@ -1,9 +1,9 @@
 import type { Accountability } from '@directus/types';
 import { getAuthProviders } from './authProvider/get-auth-providers.js';
-import type { Knex } from 'knex';
+
 import { verify_token } from './verify-token.js';
 import { CacheEnabled, CacheGet, CacheSet } from './cache.js';
-
+import type { Knex } from 'knex';
 
 
 const authProviders = await getAuthProviders();
