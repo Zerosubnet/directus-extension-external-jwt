@@ -5,7 +5,7 @@ dist
 
 # directus files
 *.db
-extensions/
+#extensions/*/**
 uploads/
 .env
 
