@@ -97,4 +97,4 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           SRCIMAGE: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.meta.outputs.tags[0] }}
           DSTIMAGE: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-        run: npx semantic-release
+        run: npx semantic-release@latest
